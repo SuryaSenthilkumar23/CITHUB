@@ -1,0 +1,148 @@
+/* CITHUB - Zorphix Dark Theme Adjustments */
+
+:root[data-theme="gitea-dark"], :root[data-theme="dark"], :root[data-theme="arc-green"], :root[data-theme="gitea-auto"], :root {
+  /* Zorphix Dark Backgrounds */
+  --color-body: #0d0d0d !important;
+  --color-box-header: #121212 !important;
+  --color-box-body: #161616 !important;
+  --color-box-body-highlight: #1a1a1a !important;
+  
+  /* Navbar and Cards */
+  --color-nav-bg: #0d0d0d !important;
+  --color-nav-hover-bg: #161616 !important;
+  --color-secondary-bg: #161616 !important;
+  --color-menu: #161616 !important;
+  --color-card: #161616 !important;
+
+  /* Typography Colors */
+  --color-text-dark: #ffffff !important;
+  --color-text: #e6e6e6 !important;
+  --color-text-light: #cccccc !important;
+  --color-text-light-1: #a3a3a3 !important;
+  --color-text-light-2: #7a7a7a !important;
+  --color-text-light-3: #525252 !important;
+
+  /* CITHUB Violet/Blue Accents */
+  --color-primary: #8a2be2 !important;
+  --color-primary-light-1: #9b4dca !important;
+  --color-primary-light-2: #ab6fdd !important;
+  --color-primary-dark-1: #7e1cc6 !important;
+  --color-primary-dark-2: #6d15b0 !important;
+  --color-primary-hover: var(--color-primary-light-1) !important;
+  --color-primary-active: var(--color-primary-dark-1) !important;
+  --color-accent: var(--color-primary) !important;
+  
+  --color-code-bg: #111111 !important;
+  --color-markup-table-row: rgba(255, 255, 255, 0.03) !important;
+  --color-hover: rgba(255, 255, 255, 0.05) !important;
+
+  --color-secondary: #262626 !important;
+  --color-secondary-dark-1: #333333 !important;
+  --color-secondary-dark-2: #404040 !important;
+  --color-secondary-dark-3: #4d4d4d !important;
+  --color-secondary-button: var(--color-secondary) !important;
+  --color-secondary-hover: var(--color-secondary-dark-1) !important;
+  --color-secondary-active: var(--color-secondary-dark-2) !important;
+}
+
+/* Global Font Adjustment */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+}
+
+/* CITHUB Branding text near Logo */
+.cithub-logo-text {
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 1.35em;
+  letter-spacing: -0.02em;
+  color: var(--color-text-dark);
+  vertical-align: middle;
+  background: linear-gradient(135deg, #7b2cbf, #4361ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Navbar specific refinements */
+.ui.menu#navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding: 0.5rem 1rem !important;
+}
+
+/* Buttons Gradient & Hover Glow for Primary */
+.ui.primary.button {
+  background: linear-gradient(135deg, #7b2cbf, #4361ee) !important;
+  border-radius: 6px !important;
+  border: none !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+.ui.primary.button:hover {
+  background: linear-gradient(135deg, #9d4edd, #4895ef) !important;
+  box-shadow: 0 0 12px rgba(123, 44, 191, 0.6) !important;
+  transform: translateY(-1px);
+}
+
+/* Base button styling */
+.ui.button {
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Dashboard Cards & Layout improvements */
+.ui.segment, .ui.card {
+  border-radius: 8px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+.dashboard .dashboard-repos,
+.dashboard .dashboard-orgs {
+  margin-bottom: 1.5rem;
+}
+
+/* Tables and Repositories */
+.ui.table {
+  border-radius: 8px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  overflow: hidden;
+}
+
+.ui.table > thead > tr > th {
+  background-color: var(--color-box-header) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.ui.table > tbody > tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  transition: background-color 0.2s ease, color 0.2s ease !important;
+}
+
+.ui.table[class*="very basic"] > tbody > tr:hover, 
+.ui.table > tbody > tr:hover,
+.flex-list .flex-item:hover {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Repository Headers */
+.repository .header-wrapper {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+/* Repository file list tweaks */
+#repo-files-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+#repo-files-table tbody tr {
+  padding: 0.25rem 0 !important;
+}

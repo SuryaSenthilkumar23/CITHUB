@@ -87,4 +87,6 @@
 
 @import "./helpers.css";
 
+@import "./zorphix.css";
+
 @tailwind utilities;
